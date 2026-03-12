@@ -4,8 +4,8 @@
     <p>Espèce : {{ $animal->species }}</p>
     <p>Âge : {{ $animal->age }} ans</p>
     <p>{{ $animal->description }}</p>
-    <div>
-        <a href="#">Modifier</a>
-        <a href="#">Supprimer</a>
+    <div class="animal-actions">
+        <span><a href="{{ route('animals.update', $animal->id) }}">Modifier</a></span>
+        <span><a href="{{ route('animals.delete', $animal->id) }}">Supprimer</a></span>
     </div>
 </div>

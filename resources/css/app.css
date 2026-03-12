@@ -9,7 +9,7 @@ html {
 
 body {
     width: 50%;
-    /* max-height: 100%; */
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -60,13 +60,30 @@ a {
     justify-content: center;
 }
 
+.animal-details {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: start;
+}
+
 .animal-card {
-    width: 210px;
+    width: 220px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .animal-photo {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.animal-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
 }

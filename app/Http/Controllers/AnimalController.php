@@ -16,4 +16,26 @@ class AnimalController extends Controller
         $animals = Animal::all();
         return view('welcome', ["animals" => $animals]);
     }
+
+    public function show($id){
+        $animal = Animal::find($id);
+        if (!$animal) {
+            return view('errors.not-found');
+        }
+        return view('pages.animal-details', ["animal" => $animal]);
+    }
+
+    public function update($id) {
+        $animal = Animal::findOrFail($id);
+        $animal->update([
+            'name' => $animal->name . " modifié"
+        ]);
+        return view('pages.animal-details', ["animal" => $animal]);
+    }
+
+    public function delete($id) {
+        $animal = Animal::findOrFail($id);
+        $animal->delete();
+        return redirect()->route('home');
+    }
 }
