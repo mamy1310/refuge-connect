@@ -30,7 +30,7 @@ class AnimalController extends Controller
         $animal->update([
             'name' => $animal->name . " modifié"
         ]);
-        return view('pages.animal-details', ["animal" => $animal]);
+        return redirect()->route('home');
     }
 
     public function delete($id) {

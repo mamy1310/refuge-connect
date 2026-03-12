@@ -1,3 +1,3 @@
 <footer>
-    2025 - Refuge Connect
+    {{ now()->year }} - Refuge Connect
 </footer>

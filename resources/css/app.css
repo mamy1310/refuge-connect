@@ -47,6 +47,13 @@ footer {
 
 a {
     color: #52c9ff;
+    text-decoration: none;
+}
+
+a.no-decoration {
+    color: black;
+    text-decoration: none;
+    display: contents;
 }
 
 #logo {
@@ -75,7 +82,7 @@ a {
 }
 
 .animal-photo {
-    width: 100%;
+    width: 220px;
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
