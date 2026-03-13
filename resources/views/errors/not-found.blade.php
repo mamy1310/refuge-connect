@@ -1,5 +1,5 @@
 @extends('layouts.app')
 @section('title', '404')
 @section('content')
-    <h2>Page non trouvée.</h2>
+    <h1>Page non trouvée.</h1>
 @endsection
