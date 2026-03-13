@@ -3,12 +3,16 @@
 @section('content')
     <h1>Nos animaux</h1>
     <div id="animal-list">
-        @forelse ($animals as $animal)
-            <a href="{{ route('animals.detail', $animal->id) }}" class="no-decoration">
-                <x-animal :animal="$animal" />
-            </a>
-        @empty
-            <li>Aucun animal trouvé.</li>
-        @endforelse
+        @if($animals->isEmpty())
+            <p>Aucun animal trouvé.</p>
+        @else
+            @foreach ($animals->chunk(3) as $row)
+                <div class="animal-row">
+                    @foreach ($row as $animal)
+                        <x-animal :animal="$animal" />
+                    @endforeach
+                </div>
+            @endforeach
+        @endif
     </div>
 @endsection

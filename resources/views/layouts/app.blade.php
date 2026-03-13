@@ -20,8 +20,8 @@
 </head>
 
 <body>
-    @include('partials.header')
     <main>
+        @include('partials.header')
         @yield('content')
     </main>
     @include('partials.footer')
